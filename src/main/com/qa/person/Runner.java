@@ -6,25 +6,31 @@ public class Runner {
 
   public static void main(String[] args) {
     ArrayList<Person> people = new ArrayList<Person>();
-    people.add(new Person("FNU", "LNU", 0, "flnu@email.com", "x7777 777777", new String[0]));
-    people.add(
-        new Person(
-            "Jefferey",
-            "Skinner",
-            30,
-            "jsk@mail.com",
-            "x1111 222222",
-            new String[] {"mName1", "mName2"}));
-    people.add(
-        new Person(
-            "Glennjamin",
-            "Johnson",
-            28,
-            "gjohn@address.com",
-            "x4444 666666",
-            new String[] {"name", "name2", "name3"}));
-    for (Person p : people) {
-      System.out.println(p);
+    Person fnu = new Person();
+    fnu.setForename("FNU");
+    fnu.setSurname("LNU");
+    fnu.setAge(0);
+    fnu.setEmail("flnu@email.com");
+    fnu.setTelephoneNo("x7777 777777");
+    fnu.setMiddleNames(new String[0]);
+    people.add(fnu);
+    Person jefferey = new Person();
+    jefferey.setForename("Jeremy");
+    jefferey.setSurname("Skinner");
+    jefferey.setAge(30);
+    jefferey.setEmail("jsk@mail.com");
+    jefferey.setTelephoneNo("x1111 222222");
+    jefferey.setMiddleNames(new String[] {"mName1", "mName2"});
+    people.add(jefferey);
+    Person glennjamin = new Person();
+    glennjamin.setForename("Glennjamin");
+    glennjamin.setSurname("Johnson");
+    glennjamin.setAge(28);
+    glennjamin.setEmail("gjohn@address.com");
+    glennjamin.setMiddleNames(new String[] {"name", "Jedadiah", "name"});
+    people.add(glennjamin);
+    for (Person person : people) {
+      System.out.println(person);
     }
   }
 }

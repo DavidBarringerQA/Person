@@ -8,6 +8,10 @@ public class Person {
   private String telephoneNo;
   private String[] middleNames;
 
+  public Person() {
+    this("", "", 0, "", "", new String[0]);
+  }
+
   public Person(
       String forname,
       String surname,
